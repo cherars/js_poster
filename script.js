@@ -21,6 +21,17 @@ const slide3SvgSquare4Node = document.querySelector('.slide3-svg-square-4');
 const slide3SvgSquare5Node = document.querySelector('.slide3-svg-square-5');
 const slide3SvgSquare6Node = document.querySelector('.slide3-svg-square-6');
 
+const slide4Node = document.querySelector('.slide_4');
+const slide4RightTopTextNode = document.querySelector('.slide_4 .slide__right-top-text');
+const slide4TextMotivationNode = document.querySelector('.slide_4 .slide__text-motivation');
+const slide4SvgContainerNode = document.querySelector('.slide_4__svg-container');
+const slide4SvgCircle1Node = document.querySelector('.slide4-svg-circle-1');
+const slide4SvgCircle2Node = document.querySelector('.slide4-svg-circle-2');
+const slide4SvgCircle3Node = document.querySelector('.slide4-svg-circle-3');
+const slide4SvgCircle4Node = document.querySelector('.slide4-svg-circle-4');
+const slide4SvgCircle5Node = document.querySelector('.slide4-svg-circle-5');
+
+
 
 const pageNode = document.querySelector('.page');
 
@@ -165,5 +176,31 @@ function animSlide3() {
 }
 
 function animSlide4() {
+	const bgcSlide4 = gsap.getProperty(document.documentElement, '--bgcSlide4');
 
+	gsap.to(document.documentElement, { '--bgColor': bgcSlide4 });
+	gsap.to(document.documentElement, { '--colorText': 'black' });
+	gsap.to(slide4SvgContainerNode, { scale: 1 });
+
+	const circle1X = gsap.getProperty(slide4SvgCircle1Node, 'cx');
+	const circle1R = gsap.getProperty(slide4SvgCircle1Node, 'r');
+	const circle1Y = gsap.getProperty(slide4SvgCircle1Node, 'cy');
+
+	const center = {
+		x: circle1X,
+		y: circle1Y
+	};
+
+	// const animSubCircle = function() {
+	// 	const percent = this.ratio;
+
+	// 	console.log();
+	// };
+
+	gsap.to(slide4SvgCircle1Node, { repeat: -1, yoyo: true, transformOrigin: 'center', scale: 1.5 });
+
+	gsap.to(slide4SvgCircle2Node, { repeat: -1, yoyo: true, transformOrigin: 'center', scale: 1.5 });
+	
 }
+
+// animSlide4();

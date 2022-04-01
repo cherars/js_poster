@@ -6,6 +6,7 @@
 	--bgcSlide1: #29ABE2;
 	--bgcSlide2: #662D91;
 	--bgcSlide3: #FBAE17;
+	--bgcSlide4: white;
 	--colorText: white;
 	--bgColor: var(--bgcSlide1);
 	--paddingPage: 4vmax;
@@ -240,6 +241,7 @@ html, body, .page {
 	left: 0;
 	top: 32%;
 	width: 100%;
+	transform: scale(0);
 }
 
 .slide_4__svg {
@@ -248,7 +250,7 @@ html, body, .page {
 
 /* .slide_4 */
 
-.slide_1,
+/* .slide_1,
 .slide_2,
 .slide_3 {
 	opacity: 0;
@@ -259,3 +261,7 @@ html, body, .page {
 .slide_4 {
 	pointer-events: auto;
 }
+
+.slide_4__svg-container {
+	transform: scale(1);
+} */
