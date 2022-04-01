@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 269.01 269.01">
+	<defs>
+		<style>
+			#slide2_2 .cls-1 {
+				fill: none;
+				stroke: #fff;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+				stroke-width: 4px;
+				stroke-dasharray: 2 10 2 10;
+			}
+
+			#slide2_2 .cls-2 {
+				fill: #fff;
+			}
+		</style>
+	</defs>
+	<g id="slide2_2" data-name="slide2_2">
+		<g id="slide2_2" data-name="slide2_2">
+			<rect class="cls-1" x="40.81" y="40.81" width="187.39" height="187.39"
+				transform="translate(-55.71 134.51) rotate(-45)" />
+			<rect class="cls-2" x="77.66" y="77.66" width="113.7" height="113.7"
+				transform="translate(-55.71 134.51) rotate(-45)" />
+		</g>
+	</g>
+</svg>

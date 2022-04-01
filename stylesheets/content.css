@@ -1,0 +1,261 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--bgcSlide1: #29ABE2;
+	--bgcSlide2: #662D91;
+	--bgcSlide3: #FBAE17;
+	--colorText: white;
+	--bgColor: var(--bgcSlide1);
+	--paddingPage: 4vmax;
+}
+
+body {
+	margin: 0;
+	font-family: "Gogh Regular";
+	font-size: 2vmax;
+	color: var(--colorText);
+}
+
+html, body, .page {
+	height: 100%;
+}
+
+.page {
+	width: 100%;
+	background-color: var(--bgColor);
+	position: relative;
+	overflow: hidden;
+}
+
+/* .slide */
+
+.slide {
+	pointer-events: none;
+}
+
+.slide_active {
+	pointer-events: auto;
+}
+
+.slide__title {
+	text-transform: uppercase;
+	max-width: 40%;
+	font-size: 1.7em;
+	position: absolute;
+	left: var(--paddingPage);
+	top: var(--paddingPage);
+	z-index: 2;
+	background-color: var(--bgColor);
+}
+
+.slide__right-top-text {
+	text-transform: uppercase;
+	position: absolute;
+	right: calc(3 * var(--paddingPage));
+	top: calc(2 * var(--paddingPage));
+}
+
+.slide__text-motivation {
+	max-width: 20%;
+	position: absolute;
+	right: calc(3 * var(--paddingPage));
+	bottom: calc(2 * var(--paddingPage));
+	z-index: 1;
+}
+
+.slides {
+	height: 100%;
+}
+
+/* .slide */
+
+/* .slide_1 */
+
+.slide__1-svg {
+	position: absolute;
+	left: calc(2 * var(--paddingPage));
+	top: 40%;
+	width: 75%;
+	user-select: none;
+}
+
+.slide_1__circle {
+	cursor: pointer;
+	transition: fill 0.2s linear;
+}
+
+.slide_1__circle:hover {
+	fill: rgb(191, 191, 191);
+}
+
+.slide_1__circle_active {
+	fill: white !important;
+	cursor: default;
+}
+
+.slide_1__line {
+	/* stroke: red !important; */
+}
+
+/* .slide_1 */
+
+/* .slide_2 */
+
+.slide_2 .slide__right-top-text {
+	transform: translate(-97vmin, 0);
+	opacity: 0;
+}
+
+.slide_2 .slide__text-motivation {
+	transform: translate(100vmin, 0);
+	opacity: 0;
+}
+
+.slide_2__svg-1 {
+	opacity: 0;
+	transform: scale(0);
+}
+
+.slide_2__svg-2 {
+	opacity: 0;
+	transform: scale(0);
+	--color: white;
+	--fill: var(--color);
+	--stroke: var(--color);
+	cursor: pointer;
+}
+
+.slide_2__svg-2:hover {
+	--color: rgb(191, 191, 191);
+}
+
+.slide_2__svg-2:active {
+	--color: rgb(163, 163, 163);
+}
+
+.slide_2__svg-2_click {
+	--color: white !important;
+	cursor: default;
+}
+
+.slide_2__svg-2 .cls-2 {
+	fill: var(--fill);
+	stroke: var(--stroke);
+	transition-timing-function: linear;
+	transition-duration: 0.2s;
+	transition-property: fill, stroke;
+}
+
+.slide_2__svg-wrapper {
+	display: grid;
+	grid-template-columns: 25% 20%;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: calc(var(--paddingPage) * 3);
+	top: 35%;
+	gap: 12%;
+	width: calc(100% - (2 * var(--paddingPage)) * 3);
+
+}
+
+/* .slide_2 */
+
+
+/* .slide_3 */
+
+.slide_3 .slide__right-top-text {
+	transform: translate(-97vmin, 0);
+	opacity: 0;
+}
+
+.slide_3 .slide__text-motivation {
+	transform: translate(100vmin, 0);
+	opacity: 0;
+}
+
+.slide_3__svg-container {
+	position: absolute;
+	left: 0;
+	top: 30%;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.slide_3__svg {
+	width: 60%;
+	transform: translate(-100vmax, 0);
+}
+
+.slide3-svg-square {
+	stroke-width: 5px;
+	--color: white;
+	--fill: var(--color);
+	--stroke: var(--color);
+	--colorNext: white;
+	fill: var(--fill);
+	stroke: var(--stroke);
+	transition-timing-function: linear;
+	transition-duration: 0.2s;
+	transition-property: fill, stroke;
+}
+
+.slide3-svg-square-6 {
+	cursor: pointer;
+}
+
+.slide3-svg-square-1 {
+	--fill: transparent;
+}
+
+.slide3-svg-square-2,
+.slide3-svg-square-3,
+.slide3-svg-square-4,
+.slide3-svg-square-5 {
+	--color: transparent;
+}
+
+/* .slide_3 */
+
+
+/* .slide_4 */
+
+.slide_4 .slide__right-top-text {
+	transform: translate(-97vmin, 0);
+	opacity: 0;
+}
+
+.slide_4 .slide__text-motivation {
+	transform: translate(100vmin, 0);
+	opacity: 0;
+}
+
+.slide_4__svg-container {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+	top: 32%;
+	width: 100%;
+}
+
+.slide_4__svg {
+	width: 30%;
+}
+
+/* .slide_4 */
+
+.slide_1,
+.slide_2,
+.slide_3 {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.slide_4 {
+	pointer-events: auto;
+}
