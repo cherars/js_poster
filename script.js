@@ -176,31 +176,28 @@ function animSlide3() {
 }
 
 function animSlide4() {
-	const bgcSlide4 = gsap.getProperty(document.documentElement, '--bgcSlide4');
 
-	gsap.to(document.documentElement, { '--bgColor': bgcSlide4 });
 	gsap.to(document.documentElement, { '--colorText': 'black' });
-	gsap.to(slide4SvgContainerNode, { scale: 1 });
+	gsap.to(slide4SvgContainerNode, { scale: 1.5 });
 
-	const circle1X = gsap.getProperty(slide4SvgCircle1Node, 'cx');
-	const circle1R = gsap.getProperty(slide4SvgCircle1Node, 'r');
-	const circle1Y = gsap.getProperty(slide4SvgCircle1Node, 'cy');
+	animTextSlide({
+		slidePrevNode: slide3Node,
+		slidePrevRightTopTextNode: slide3RightTopTextNode,
+		slidePrevTextMotivationNode: slide3TextMotivationNode,
+		slideNextNode: slide4Node,
+		slideNextRightTopTextNode: slide4RightTopTextNode,
+		slideNextTextMotivationNode: slide4TextMotivationNode,
+		funcAnimSlideNext: () => {},
+		cssVarBgc: '--bgcSlide4'
+	});
 
-	const center = {
-		x: circle1X,
-		y: circle1Y
-	};
+	gsap.to(slide4SvgCircle1Node, { repeat: -1, yoyo: true, duration: 'random(0.7, 2)', transformOrigin: '50% 50%', scale: 0.5 });
 
-	// const animSubCircle = function() {
-	// 	const percent = this.ratio;
-
-	// 	console.log();
-	// };
-
-	gsap.to(slide4SvgCircle1Node, { repeat: -1, yoyo: true, transformOrigin: 'center', scale: 1.5 });
-
-	gsap.to(slide4SvgCircle2Node, { repeat: -1, yoyo: true, transformOrigin: 'center', scale: 1.5 });
+	gsap.to(slide4SvgCircle2Node, { repeat: -1, yoyo: true, duration: 'random(0.7, 2)', transformOrigin: `0 50%`, scale: 0.5 });
+	gsap.to(slide4SvgCircle3Node, { repeat: -1, yoyo: true, duration: 'random(0.7, 2)', transformOrigin: `100% 50%`, scale: 0.5 });
+	gsap.to(slide4SvgCircle4Node, { repeat: -1, yoyo: true, duration: 'random(0.7, 2)', transformOrigin: `50% 100%`, scale: 0.5 });
+	gsap.to(slide4SvgCircle5Node, { repeat: -1, yoyo: true, duration: 'random(0.7, 2)', transformOrigin: `50% 0`, scale: 0.5 });
 	
 }
 
-// animSlide4();
+
